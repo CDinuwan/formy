@@ -10,6 +10,7 @@ public class HomePage {
     private By userInputLink=By.linkText("Key and Mouse Press");
     private By autoCompleteFormLink=By.linkText("Autocomplete");
     private By pageScrollLink=By.linkText("Page Scroll");
+    private By switchWindowLink=By.linkText("Switch Window");
 
     public UserInputPage clickUserInputLink(){
         $(userInputLink).shouldBe(Condition.visible).click();
@@ -22,7 +23,12 @@ public class HomePage {
     }
 
     public PageScroll clickPageScrollLink(){
-        $(pageScrollLink).shouldBe(Condition.enabled).click();
+        $(pageScrollLink).shouldBe(Condition.visible).click();
         return new PageScroll();
+    }
+
+    public SwitchWindowPage clickSwitchWindowLink(){
+        $(switchWindowLink).shouldBe(Condition.visible).click();
+        return new SwitchWindowPage();
     }
 }

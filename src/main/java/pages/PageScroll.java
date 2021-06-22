@@ -15,7 +15,7 @@ public class PageScroll {
     public void setFullNameField(String fullName){
         SelenideElement nameField= $(fullNameField);
         actions().moveToElement(nameField);
-        $(fullName).shouldBe(Condition.enabled).setValue(fullName);
+        $(fullNameField).shouldBe(Condition.enabled).setValue(fullName);
     }
 
     public void setDateField(String date){
