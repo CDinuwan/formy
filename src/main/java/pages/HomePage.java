@@ -13,6 +13,7 @@ public class HomePage {
     private By switchWindowLink=By.linkText("Switch Window");
     private By modelLink=By.linkText("Modal");
     private By dragAndDropLink=By.linkText("Drag and Drop");
+    private By buttonsLink=By.linkText("Buttons");
 
     public UserInputPage clickUserInputLink(){
         $(userInputLink).shouldBe(Condition.visible).click();
@@ -42,5 +43,10 @@ public class HomePage {
     public DragAndDropPage clickDragAndDropLink(){
         $(dragAndDropLink).shouldBe(Condition.enabled).click();
         return new DragAndDropPage();
+    }
+
+    public ButtonsPage clickButtonsLink(){
+        $(buttonsLink).shouldBe().click();
+        return new ButtonsPage();
     }
 }
